@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mark-percy';
+
+  startBuildv: string = ""
+  
+  startBuild(){
+    if(this.startBuildv == ""){
+      this.startBuildv = "Nothing to build";
+
+    } else {
+      this.startBuildv = "";
+    }
+  }
 }
