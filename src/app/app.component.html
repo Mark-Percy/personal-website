@@ -1,6 +1,21 @@
-<div class="container d-flex flex-column flex-align-items-center">
-  <h1>Hello World</h1>
-  <button (click)="startBuild();" class="btn btn-success">Start Build</button>
-  <p *ngIf="startBuildv != ''">{{startBuildv}}</p>
-
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Mark Percy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto-my-2">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/timeline" routerLinkActive="active">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
